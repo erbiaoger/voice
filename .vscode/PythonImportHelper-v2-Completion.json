@@ -1,0 +1,20 @@
+[
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "readdat",
+        "kind": 2,
+        "importPath": "readdat",
+        "description": "readdat",
+        "peekOfCode": "def readdat(filename):\n    with open(filename, 'rb') as fid:\n                    D = np.fromfile(fid, dtype=np.float32)\n    fs   = D[10]\n    dt   = 1 / fs\n    dx   = D[13]\n    nx   = int(D[16])\n    nt   = int(fs * D[17])\n    data = D[64:].reshape((nx, nt), order='F').T  # 使用Fortran顺序进行数据的reshape\n    return data, dx, dt, nt, nx",
+        "detail": "readdat",
+        "documentation": {}
+    }
+]
