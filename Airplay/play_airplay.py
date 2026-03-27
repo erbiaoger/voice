@@ -20,8 +20,8 @@ from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 # ===== dasQt：项目内部函数 =====
-from dasQt.core.process.freqattributes import spectrogram as sp_spectrogram
-from dasQt.core.process.filter import (
+from dasQt.process import spectrogram as sp_spectrogram
+from dasQt.process import (
     bandpass, bandstop, lowpass,
     lowpass_cheby_2, highpass, envelope,
     median_filter2
